@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .apple-button {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full transition-all duration-200;
+  }
+  
+  .apple-button-primary {
+    @apply apple-button bg-apple-blue text-white hover:bg-blue-600;
+  }
+  
+  .apple-button-secondary {
+    @apply apple-button border border-apple-blue text-apple-blue hover:bg-apple-blue hover:text-white;
+  }
+  
+  .product-section {
+    @apply min-h-screen flex flex-col justify-center items-center text-center px-4 py-20;
+  }
+  
+  .product-title {
+    @apply text-4xl md:text-6xl font-semibold mb-4;
+  }
+  
+  .product-subtitle {
+    @apply text-xl md:text-2xl mb-8 text-gray-600;
+  }
+  
+  .product-buttons {
+    @apply flex flex-col sm:flex-row gap-4 mb-12;
+  }
+}
